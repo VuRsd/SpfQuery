@@ -1,0 +1,18 @@
+[package]
+name = "spfquery"
+version = "0.1.0"
+edition = "2024"
+description = "SPF record recursive query tool with tree visualization"
+
+[[bin]]
+name = "spfquery"
+path = "src/main.rs"
+
+[dependencies]
+hickory-resolver = { version = "0.26.1", features = ["system-config"] }
+hickory-proto = "0.26.1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+clap = { version = "4", features = ["derive"] }
+owo-colors = "4.3"
+ipnetwork = "0.21"
+thiserror = "2"
